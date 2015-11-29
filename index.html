@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Loan Amortization</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="loanDetails">
+		<fieldset>
+			<legend>Loan Details</legend>
+			<label>Loan Amount:<br>
+				 <input type="text" id="loanAmount" placeholder="20000">
+			</label><br>
+			<label>Interest Rate:<br>
+				 <input type="text" id="interestRate" placeholder="7.5">
+			</label><br>
+			<label>Length of Loan:<br>
+				 <input type="text" id="loanLength" placeholder="60">
+			</label><br>
+			<input id="months" type="radio" name="term" value="months" checked="checked">
+			<label for="months">Months</label>
+			<input id="years" type="radio" name="term" value="years">
+			<label for="years">Years</label><br><br>
+			<input type="button" id="calculate" value="Calculate">
+		</fieldset>
+	</div>
+	<h2>Amortization Schedule</h2>
+	<hr>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Payment</th>
+					<th>Amount</th>
+					<th>Interest</th>
+					<th>Principal</th>
+					<th>Balance</th>
+				</tr>
+			</thead>
+			<tbody id="tableBody"></tbody>
+			<tfoot id="tableFooter"></tfoot>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="helperFunctions.js"></script>
+	<script type="text/javascript" src="amortization.js"></script>
+</body>
+</html>
